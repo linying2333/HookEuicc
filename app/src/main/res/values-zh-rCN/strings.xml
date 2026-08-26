@@ -1,23 +1,27 @@
 <resources>
     <string name="app_name">HookEuicc</string>
-    <string name="xposeddescription">解除某些软件对eSIM的要求，也可用于获取eSIM代码</string>
+    <string name="xposeddescription">解除某些软件对eSIM的要求，也可用于获取eSIM代码 (即LPA链接)</string>
 
-    <string name="not_supported">LSPosed 未激活或当前环境不支持，请检查。</string>
+    <string name="not_supported">LSPosed 未激活或当前环境不支持，请检查框架状态。</string>
     <string name="ignore">忽略</string>
 
     <string name="title_enable_hook">Hook Euicc</string>
-    <string name="summary_enable_hook">伪装支持eSIM，可用于获取eSIM代码\n勾选需要伪装的应用即可</string>
+    <string name="summary_enable_hook">伪装支持eSIM，可用于获取eSIM代码\n勾选需要伪装的应用即可\n(如果应用正在运行，请手动杀死相关进程后才能生效)</string>
 
     <string name="title_enable_fake_eid">伪装 EID</string>
-    <string name="summary_enable_fake_eid">注: 仅欺骗软件，部分应用可能无效</string>
+    <string name="summary_enable_fake_eid">注: 仅欺骗软件，且部分应用可能无效</string>
 
-    <string name="title_fake_eid_value">EID (32位)</string>
+    <string name="title_fake_eid_value">EID (32位数字)</string>
+    <string name="summary_fake_eid_value">89044123456789876543210123456789</string>
 
-    <string name="title_no_euicc">我不是eUICC卡</string>
-    <string name="summary_no_euicc">可用于部分设备与eUICC卡[ISD-R]独占，导致无法访问的问题\n需勾选[com.android.phone]并重启手机\n注: 无法热插拔卡，请插入eUICC卡后再重启手机</string>
+    <string name="title_no_euicc">我不是 eUICC 卡</string>
+    <string name="summary_no_euicc">可用于部分设备eUICC卡[ISD-R]被独占，导致无法访问的问题\n需勾选[com.android.phone]并重启手机\n注: 无法热插拔卡，请插入eUICC卡后再重启手机\n(手动杀死相关进程重新触发 Hook 也可以，支持在 Hook 运行时热重载开关状态)</string>
 
-    <string name="title_bypass_omapi">OMAPI Bypass</string>
-    <string name="summary_bypass_omapi">绕过 ARA、ARF 限制。通常用于无ARA的卡进行OMAPI访问\n需勾选[com.android.se]并重启手机\n注: 无特殊要求无需启用</string>
+    <string name="title_bypass_omapi">OMAPI 安全机制绕过</string>
+    <string name="summary_bypass_omapi">绕过 ARA、ARF 限制。通常用于无 ARA 的 eUICC 卡进行 OMAPI 访问\n需勾选[com.android.se]并重启手机\n(手动杀死相关进程重新触发 Hook 也可以，支持在 Hook 运行时热重载开关状态)\n注: 无特殊要求无需启用，这会降低安全性</string>
+
+    <string name="title_whitelist_packages">OMAPI 调用方白名单</string>
+    <string name="summary_whitelist_packages">逗号分隔的包名，仅这些应用可以绕过 ARA/ARF\n留空则对所有应用生效\n(已 Hook 时支持包名白名单热重载)\n例: com.google.android.euicc,im.angry.easyeuicc</string>
 
     <string name="title_hide_icon">隐藏图标</string>
     <string name="summary_hide_icon">隐藏模块在桌面上的启动图标</string>
