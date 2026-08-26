@@ -8,5 +8,9 @@
 ### OMAPI Bypass
 绕过 ARA、ARF 限制。通常用于无ARA的卡进行OMAPI访问
 
+> #### mod版新增: 可选的调用方白名单, 以在无ARA安全机制的情况下保证安全调用
+
 > [!NOTE]
 > 需勾选 `com.android.se` 并重启手机 (或执行 `su -c killall com.android.se`)
+> 除非特别需要，否则请勿启用此功能
+> > mod版新增: 在完成Hook后开关是实时生效的

@@ -1,18 +1,27 @@
 <resources>
     <string name="app_name">HookEuicc</string>
-    <string name="xposeddescription">特定のアプリでの eSIM 要件をバイパスしてコードの取得を可能にします。</string>
+    <string name="xposeddescription">特定のアプリでの eSIM 要件をバイパスしてコードの取得を可能にします。（つまり LPA リンク）</string>
 
-    <string name="not_supported">LSPosed が有効化されていないか、使用している環境が対応していない可能性があります。設定を確認してください。</string>
+    <string name="not_supported">LSPosed が有効化されていないか、使用している環境が対応していない可能性があります。フレームワークの状態を確認してください。</string>
     <string name="ignore">無視</string>
 
     <string name="title_enable_hook">eUICC をフック</string>
-    <string name="summary_enable_hook">eSIM の対応を偽装するには、この機能でコードを取得できます。\n偽装するアプリを選択してください。</string>
+    <string name="summary_enable_hook">eSIM 対応を偽装し、コードを取得できます。\n偽装するアプリを選択してください。\nアプリが既に実行中の場合は、手動で終了すると反映されます。</string>
+
+    <string name="title_enable_fake_eid">EID を偽装</string>
+    <string name="summary_enable_fake_eid">注: ソフトウェアのみを偽装し、一部のアプリでは動作しない場合があります場合があります。</string>
+
+    <string name="title_fake_eid_value">EID (32桁)</string>
+    <string name="summary_fake_eid_value">89044123456789876543210123456789</string>
 
     <string name="title_no_euicc">非 eUICC モード</string>
-    <string name="summary_no_euicc">eUICC [ISD-R] の排他的アクセス権を持つデバイスの問題を修正します。\n[com.android.phone] を選択して再起動する必要があります。\n注意: ホットスワップには対応していません。再起動前に eUICC カードを挿入してください。</string>
+    <string name="summary_no_euicc">eUICC [ISD-R] の排他的アクセス権を持つデバイスの問題を修正します。\n[com.android.phone] を選択して再起動する必要があります。\n注意: ホットスワップには対応していません。再起動前に eUICC カードを挿入してください。\n(手動でプロセスを終了してフックを再トリガーすることもできます、フック中はこのオプションのホットリロードに対応しています。)</string>
 
-    <string name="title_bypass_omapi">OMAPI をバイパス</string>
-    <string name="summary_bypass_omapi">ARA/ARF の制限をバイパスします。通常は ARA のないカードで OMAPI にアクセスする場合で使用されます。\n[com.android.se] を選択して再起動する必要があります。\n注意: 通常はこの機能を有効化しないでください。</string>
+    <string name="title_bypass_omapi">OMAPI の制限をバイパス</string>
+    <string name="summary_bypass_omapi">ARA/ARF の制限をバイパスします。通常は ARA のないカードで OMAPI にアクセスする場合で使用されます。\n[com.android.se] を選択して再起動する必要があります。\n(手動でプロセスを終了してフックを再トリガーすることもできます、フック中はこのオプションのホットリロードに対応しています。)\n注意: 必要な場合以外は有効にしないでください。セキュリティが低下します。</string>
+
+    <string name="title_whitelist_packages">OMAPI 呼び出し元ホワイトリスト</string>
+    <string name="summary_whitelist_packages">カンマ区切りのパッケージ名。これらのみが ARA/ARF をバイパスします。\n空白にするとすべてのアプリにバイパスが適用されます。\n(フック中はこのオプションのパッケージホワイトリストホットリロードに対応しています。)\n例: com.google.android.euicc,im.angry.easyeuicc</string>
 
     <string name="title_hide_icon">アイコンを非表示にする</string>
     <string name="summary_hide_icon">ランチャーからアイコンを非表示にします。</string>

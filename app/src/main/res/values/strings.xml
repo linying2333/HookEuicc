@@ -1,24 +1,27 @@
 <resources>
     <string name="app_name">HookEuicc</string>
-    <string name="xposeddescription">Bypasses eSIM requirements for certain apps and can be used to retrieve eSIM codes.</string>
+    <string name="xposeddescription">Bypasses eSIM requirements for certain apps and can be used to retrieve eSIM codes.(I.e. LPA link)</string>
 
     <string name="not_supported">LSPosed is not activated, or your environment is not supported. Please check your framework status.</string>
     <string name="ignore">Ignore</string>
 
     <string name="title_enable_hook">Hook Euicc</string>
-    <string name="summary_enable_hook">Spoof eSIM support to retrieve eSIM codes.\nSelect the apps you want to spoof.</string>
+    <string name="summary_enable_hook">Spoof eSIM support to retrieve eSIM codes.\nSelect the apps you want to spoof.\n(If the app is already running, manually kill it for changes to take effect.)</string>
 
     <string name="title_enable_fake_eid">Fake EID</string>
-    <string name="summary_enable_fake_eid"></string>
+    <string name="summary_enable_fake_eid">Note: Spoofing software only and some applications may not work.</string>
 
     <string name="title_fake_eid_value">EID (32-bit)</string>
     <string name="summary_fake_eid_value">89044123456789876543210123456789</string>
 
     <string name="title_no_euicc">Non-eUICC Mode</string>
-    <string name="summary_no_euicc">Fixes access issues on devices where eUICC [ISD-R] has exclusive access.\nRequires selecting [com.android.phone] and rebooting.\nNote: Hot-swapping is not supported. Insert the eUICC card before rebooting.</string>
+    <string name="summary_no_euicc">Fixes access issues on devices where eUICC [ISD-R] has exclusive access.\nRequires selecting [com.android.phone] and rebooting.\nNote: Hot-swapping is not supported. Insert the eUICC card before rebooting.\nAlternatively, manually kill the process to re-trigger the hook, This option supports hot-reload while hooked.</string>
 
-    <string name="title_bypass_omapi">OMAPI Bypass</string>
-    <string name="summary_bypass_omapi">Bypass ARA/ARF restrictions. Typically used for OMAPI access on cards without ARA.\nRequires selecting [com.android.se] and rebooting.\nNote: Do not enable unless specifically required.</string>
+    <string name="title_bypass_omapi">OMAPI Secure Bypass</string>
+    <string name="summary_bypass_omapi">Bypass ARA/ARF restrictions. Typically used for OMAPI access on cards without ARA.\nRequires selecting [com.android.se] and rebooting.\nAlternatively, manually kill the process to re-trigger the hook, This option supports hot-reload while hooked.\nNote: Do not enable unless specifically required. This reduces security.</string>
+
+    <string name="title_whitelist_packages">OMAPI Caller Whitelist</string>
+    <string name="summary_whitelist_packages">Comma-separated package names. Only these apps will bypass ARA/ARF.\nLeave empty to bypass for all apps.\nNote: This option supports package name whitelist hot-reload while hooked.\ne.g. com.google.android.euicc,im.angry.easyeuicc</string>
 
     <string name="title_hide_icon">Hide Icon</string>
     <string name="summary_hide_icon">Hide the module icon from the launcher.</string>

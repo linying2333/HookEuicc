@@ -30,6 +30,13 @@
         android:title="@string/title_bypass_omapi"
         android:summary="@string/summary_bypass_omapi"
         android:defaultValue="false" />
+    <EditTextPreference
+        android:key="whitelist_packages"
+        android:title="@string/title_whitelist_packages"
+        android:summary="@string/summary_whitelist_packages"
+        android:defaultValue=""
+        android:inputType="text"
+        android:dependency="enable_bypass_omapi" />
     <SwitchPreference
         android:key="enable_hide_icon"
         android:title="@string/title_hide_icon"
